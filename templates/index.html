@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The Frozen Section</title>
+  <link rel="stylesheet" href="static/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-12 center jumbotron text-center card border-primary">
+        <h1 class = "text-primary text-bold">The Frozen Section</h1>
+        <p class = "text-primary">Exploring Food Deserts in Georgia</p>
+      </div>
+    </div>
+
+    <div class = "row">
+      <div class = "col-md-12">
+        <div class = "card border-secondary mb-2">
+          <div class = "card-header text-white bg-secondary text-center">Map</div>
+          <div class = "card-body">
+            <div id = "map"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class = "row">
+      <div class = "col-md-12">
+        <div class = "card border-warning mb-2">
+          <div class = "card-header text-white bg-warning text-center">Bubble Chart</div>
+          <div class = "card-body">
+            <div id = "bubble"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="row">
+      <div class="col-md-2">
+        <div class = "card border-danger mb-2">
+          <div class="card-header text-white bg-danger text-center">Zip Code:</div>
+          <div class = "card-body">
+            <h6 class = "text-muted">Select Below</h6>
+            <select id="selDataset"></select>
+          </div>
+        </div>
+      </div>
+      <div class = "col-md-5">
+        <div class="card border-success mb-2">
+          <div class="card-header text-white bg-success text-center">Bar Graph</div>
+            <div class = "card-body">
+              <div id="bar"></div>
+           </div> 
+        </div>
+      </div>
+
+      <div class = "col-md-5">
+        <div class="card border-info mb-2">
+          <div class="card-header text-white bg-info text-center">Pie Graph</div>
+            <div class = "card-body">
+              <div id="pie"></div>
+           </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="./static/js/app.js"></script>
+</body>
+
+</html>
