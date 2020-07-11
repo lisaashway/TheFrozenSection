@@ -1,6 +1,4 @@
-{
-   "html_attributions" : [],
-   "results" : [
+[
       {
          "business_status" : "OPERATIONAL",
          "formatted_address" : "77 West Paces Ferry Rd NW, Atlanta, GA 30305, United States",
@@ -594,6 +592,4 @@
          ],
          "user_ratings_total" : 852
       }
-   ],
-   "status" : "OK"
-}
+   ]

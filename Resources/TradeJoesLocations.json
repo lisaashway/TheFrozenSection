@@ -1,6 +1,5 @@
-{
-   "html_attributions" : [],
-   "results" : [
+
+   [
       {
          "business_status" : "OPERATIONAL",
          "formatted_address" : "3183 Peachtree Rd, Atlanta, GA 30305, United States",
@@ -337,6 +336,4 @@
          ],
          "user_ratings_total" : 832
       }
-   ],
-   "status" : "OK"
-}
+   ]

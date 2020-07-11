@@ -1,7 +1,4 @@
-{
-   "html_attributions" : [],
-   "next_page_token" : "CoQC8wAAAMSTdAQTFv53J1QP_hQ3mdv6R4RWngmHp6OD2hbPB2UHotTOTPOWn6hJ7yt85HkX97Z_D6s-bgBtZ5AC74NgGCUp6IZg6dVY7IkLIqF7ziWpoQNARraRrGTzSjAPpJX5bi-SfmB6jkW4gIv2CITceUQQtNaSGSDkTbWecZlwZz0395zcQjJ0PK6c_4qXL5ZcuKyldwqddaUwz1Vt_OBzdJ6u0VaZu6mz2FBFoB4_em7R-vWIITioGPDD08PWDgoGWjJIflWjHrDDmnGqpT922ezi2UOSIQts29nf5_tFRfMRx1bvQfCq_M-qNSXb49lAPWcpmIMjRkCkz_BIA8F076gSEL9OTodPIB1DEcvtG104fuUaFHUq9gkyfFov93olTE9BiGzhXdcE",
-   "results" : [
+[
       {
          "business_status" : "OPERATIONAL",
          "formatted_address" : "2900 Peachtree Rd NW, Atlanta, GA 30305, United States",
@@ -1071,6 +1068,4 @@
          ],
          "user_ratings_total" : 575
       }
-   ],
-   "status" : "OK"
-}
+   ]
