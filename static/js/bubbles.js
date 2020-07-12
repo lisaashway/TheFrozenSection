@@ -92,7 +92,7 @@ d3.json("Resources/grocery_info_from_zipcodes.json").then(function(zipcodes){
     var toolTip = d3.tip()
     .attr("class", "tooltip")
     .attr("background", "#FF5CDA")
-    .offset([350, -20])
+    .offset([-50, -20])
     .html(function(d) {
         var numberOfStores = d.groceryStores.length;
         var popUpList = "<strong><u>" + d.zip + "</strong></u><br>"
