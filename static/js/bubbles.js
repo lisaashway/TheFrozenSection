@@ -21,9 +21,18 @@ d3.json("Resources/grocery_info_from_zipcodes.json").then(function(zipcodes){
 
     //create an SVG wrapper, append an SVG element that will hold the scatter plot, and add in svg sizes.
     var svg = d3.select("#bubble")
-    .append("svg")
-    .attr("width", svgWidth)
-    .attr("height", svgHeight);
+        .append("div")
+            // Container class to make it responsive.
+            .classed("svg-container", true) 
+            .append("svg")
+            // Responsive SVG needs these 2 attributes and no width and height attr.
+            .attr("preserveAspectRatio", "xMinYMin meet")
+            .attr("viewBox", "0 0 1000 600")
+            // Class to make it responsive.
+            .classed("svg-content-responsive", true)
+            .append("svg")
+            .attr("width", svgWidth)
+            .attr("height", svgHeight);
 
     //create group and move entire svg to margin locations
     var chartGroup = svg.append("g")
@@ -123,5 +132,17 @@ d3.json("Resources/grocery_info_from_zipcodes.json").then(function(zipcodes){
     .attr("y", 20)
     .attr("class", "h6")
     .text("Median Family Income");
+
+    
+    var aspect = width / height;
+    d3.select(window)
+        .on("resize", function() {
+            var targetWidth = svg.node().getBoundingClientRect().width;
+            g.attr("width", targetWidth);
+            g.attr("height", targetWidth / aspect);
+        });
+
+            
+     
     
 });
