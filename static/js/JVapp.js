@@ -1,7 +1,9 @@
 var selectedZIP = "30002";
 console.log(selectedZIP);
 
-d3.json("../../Resources/all_georgia.json").then(function(zipcodes){
+const groceryURL = "Resources/all_georgia.json";
+
+d3.json(groceryURL).then(function(zipcodes){
     console.log(zipcodes[selectedZIP].groceryStores)
     var grocerylist = zipcodes[selectedZIP].groceryStores;
      //Creating  table to create list of grocery stores
@@ -22,10 +24,10 @@ d3.json("../../Resources/all_georgia.json").then(function(zipcodes){
 });
 
 // def incURL
-const incURL = "../../Resources/Income_(by_Zip_Code)_2018.csv";
+const incURL = "Resources/Income_(by_Zip_Code)_2018.csv";
 
 // def educURL
-const educURL = "../../Resources/Educational_Attainment_(by_Zip_Code)_2018.csv";
+const educURL = "Resources/Educational_Attainment_(by_Zip_Code)_2018.csv";
 
 
 //dropdown
@@ -251,7 +253,7 @@ d3.csv(educURL).then(function(education){
                 Plotly.newPlot('pie', pdata, playout);
         });
 
-        d3.json("../../Resources/all_georgia.json").then(function(zipcodes){
+        d3.json("Resources/all_georgia.json").then(function(zipcodes){
             console.log(zipcodes[selectedZIP].groceryStores)
             var grocerylist = zipcodes[selectedZIP].groceryStores;
              //Creating Side Panel of Dempgraphic Info Body
