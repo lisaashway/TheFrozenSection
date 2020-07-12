@@ -69,6 +69,20 @@ d3.csv(incURL).then(function(income){
         x: ['Under $35k','$35-75k','$75k-200k','Over $200k'],
         y: vals,
         orientation: 'v',
+        marker: {
+            color: vals,
+            colorscale: [
+                ['0.0', '#f7dc6f'],
+                ['0.111111111111', '#5dade2'],
+                ['0.222222222222', '#58d68d'],
+                ['0.333333333333', '#c39bd3'],
+                ['0.444444444444', '#ec7063'],
+                ['0.555555555556', '#fdedec'],
+                ['0.666666666667', '#2980b9'],
+                ['0.777777777778', '#d2b4de'],
+                ['0.888888888889', '#73c6b6'],
+                ['1.0', 'rgb(242, 100, 217)']]
+        },
     };
 
     var bdata = [traceB];
@@ -107,6 +121,16 @@ d3.csv(educURL).then(function(education){
         labels: ['No High School', 'Some HS', 'HS Grad', 'Some College', "Associate's", "Bachelor's", "Grad./Professional"],
         textinfo: 'label+percemt',
         insidetextorientation: 'outside',
+        marker: {
+            'colors': [
+                '#f7dc6f',
+                '#ec7063',
+                '#fdedec',
+                '#2980b9',
+                '#d2b4de',
+                '#73c6b6',
+                'rgb(242, 100, 217)'
+            ]}
         }];
         
         var playout = {
@@ -152,6 +176,20 @@ d3.csv(educURL).then(function(education){
                 x: ['Under $35k','$35-75k','$75k-200k','Over $200k'],
                 y: vals,
                 orientation: 'v',
+                marker: {
+                    color: vals,
+                    colorscale: [
+                        ['0.0', '#f7dc6f'],
+                        ['0.111111111111', '#5dade2'],
+                        ['0.222222222222', '#58d68d'],
+                        ['0.333333333333', '#c39bd3'],
+                        ['0.444444444444', '#ec7063'],
+                        ['0.555555555556', '#fdedec'],
+                        ['0.666666666667', '#2980b9'],
+                        ['0.777777777778', '#d2b4de'],
+                        ['0.888888888889', '#73c6b6'],
+                        ['1.0', 'rgb(242, 100, 217)']]
+                },
             };
 
             var bdata = [traceB];
@@ -190,12 +228,23 @@ d3.csv(educURL).then(function(education){
                 labels: ['No High School', 'Some HS', 'HS Grad', 'Some College', "Associate's", "Bachelor's", "Grad./Professional"],
                 textinfo: 'label+percemt',
                 insidetextorientation: 'outside',
+                marker: {
+                    'colors': [
+                        '#f7dc6f',
+                        '#ec7063',
+                        '#fdedec',
+                        '#2980b9',
+                        '#d2b4de',
+                        '#73c6b6',
+                        'rgb(242, 100, 217)'
+                    ]}
                 }];
                 
                 var playout = {
                     autosize: true,
                     automargin: true,
                     showlegend:false,
+                    colorscale: 'Picnic'
                 };
                 
                 //userData?
