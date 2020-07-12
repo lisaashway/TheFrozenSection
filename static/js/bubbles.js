@@ -124,6 +124,5 @@ d3.json("../../Resources/grocery_info_from_zipcodes.json").then(function(zipcode
     .attr("y", 20)
     .attr("class", "active")
     .text("Median Family Income");
-
+    
 });
-            
