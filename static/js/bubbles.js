@@ -118,11 +118,11 @@ d3.json("Resources/grocery_info_from_zipcodes.json").then(function(zipcodes){
     // create y axes labels
     chartGroup.append("text")
     .attr("transform", "rotate(-90)")
-    .attr("y", 0 - margin.left - 5)
+    .attr("y", 0 - margin.left - 1)
     .attr("x", 0 - (height / 2))
     .attr("dy", "1em")
     .attr("class", "h6")
-    .text("Years of School");
+    .text("Years of Education");
 
 
     //create x axes labels
@@ -132,15 +132,6 @@ d3.json("Resources/grocery_info_from_zipcodes.json").then(function(zipcodes){
     .attr("y", 20)
     .attr("class", "h6")
     .text("Median Family Income");
-
-    
-    var aspect = width / height;
-    d3.select(window)
-        .on("resize", function() {
-            var targetWidth = svg.node().getBoundingClientRect().width;
-            g.attr("width", targetWidth);
-            g.attr("height", targetWidth / aspect);
-        });
 
             
      
