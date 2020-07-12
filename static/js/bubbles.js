@@ -1,5 +1,5 @@
 
-d3.json("../../Resources/grocery_info_from_zipcodes.json").then(function(zipcodes){
+d3.json("Resources/grocery_info_from_zipcodes.json").then(function(zipcodes){
 
     zipcodesArray2 = Object.values(zipcodes)
 
