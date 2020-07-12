@@ -1,11 +1,11 @@
 
-d3.json("grocery_info_from_zipcodes.json").then(function(zipcodes){
+d3.json("../../Resources/grocery_info_from_zipcodes.json").then(function(zipcodes){
 
     zipcodesArray2 = Object.values(zipcodes)
 
     //create svg sizes
     var svgWidth = 1000;
-    var svgHeight = 800;
+    var svgHeight = 600;
 
     //create margins for chart
     var margin = {

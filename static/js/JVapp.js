@@ -2,10 +2,10 @@ var selectedZIP = "30318";
 console.log(selectedZIP);
 
 // def incURL
-const incURL = "Resources/Income_(by_Zip_Code)_2018.csv";
+const incURL = "../../Resources/Income_(by_Zip_Code)_2018.csv";
 
 // def educURL
-const educURL = "Resources/Educational_Attainment_(by_Zip_Code)_2018.csv";
+const educURL = "../../Resources/Educational_Attainment_(by_Zip_Code)_2018.csv";
 
 
 //dropdown
