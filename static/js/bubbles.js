@@ -32,7 +32,7 @@ d3.json("../../Resources/grocery_info_from_zipcodes.json").then(function(zipcode
     // create scaling functions based off of data
     var xLinearScale = d3.scaleLinear()
     .domain(d3.extent(zipcodesArray2, d => d.medianIncome))
-    .range([0, width])
+    .range([0, width-40])
 
     var yLinearScale = d3.scaleLinear()
     .domain(d3.extent(zipcodesArray2, d => d.yearsOfSchool))
@@ -62,11 +62,11 @@ d3.json("../../Resources/grocery_info_from_zipcodes.json").then(function(zipcode
     .append("circle")
     .attr("cx", d => xLinearScale(d.medianIncome))
     .attr("cy", d => yLinearScale(d.yearsOfSchool))
-    .attr("r", d => d.groceryCount*2.5+2)
+    .attr("r", d => (d.groceryCount*2.5)+10)
     .attr("fill", d => myColor(d.groceryCount))
     .attr("opacity", ".9");
 
-    //add text from count of GroveryStores
+    //add text from count of GroceryStores
     chartGroup.selectAll("null")
     .data(zipcodesArray2)
     .enter()
@@ -75,16 +75,15 @@ d3.json("../../Resources/grocery_info_from_zipcodes.json").then(function(zipcode
     .attr("y", d => yLinearScale(d.yearsOfSchool)+4)
     .text(d => d.groceryCount)
     .attr("font-family", "sans-serif")
-    .attr("font-size", "12px")
+    .attr("font-size", "10px")
     .attr("text-anchor", "middle")
     .attr("fill", "white");
-
-
 
     // create tooltip pop-up
     var toolTip = d3.tip()
     .attr("class", "tooltip")
-    .offset([350, -200])
+    .attr("background", "#FF5CDA")
+    .offset([350, -20])
     .html(function(d) {
         var numberOfStores = d.groceryStores.length;
         var popUpList = "<strong><u>" + d.zip + "</strong></u><br>"
@@ -113,16 +112,16 @@ d3.json("../../Resources/grocery_info_from_zipcodes.json").then(function(zipcode
     .attr("y", 0 - margin.left - 5)
     .attr("x", 0 - (height / 2))
     .attr("dy", "1em")
-    .attr("class", "active")
+    .attr("class", "h6")
     .text("Years of School");
 
 
     //create x axes labels
     chartGroup.append("text")
-    .attr("transform", `translate(${width / 2}, ${height + 20})`)
+    .attr("transform", `translate(${(width-40)/ 2}, ${height + 20})`)
     .attr("x", 0)
     .attr("y", 20)
-    .attr("class", "active")
+    .attr("class", "h6")
     .text("Median Family Income");
     
 });

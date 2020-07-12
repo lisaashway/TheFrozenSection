@@ -4,7 +4,7 @@ console.log(selectedZIP);
 d3.json("../../Resources/all_georgia.json").then(function(zipcodes){
     console.log(zipcodes[selectedZIP].groceryStores)
     var grocerylist = zipcodes[selectedZIP].groceryStores;
-     //Creating Side Panel of Dempgraphic Info Body
+     //Creating  table to create list of grocery stores
     var selectDiv = d3.select("#grocerylist");
     selectDiv.selectAll("table").remove();
     var table = selectDiv.append("table");
@@ -15,7 +15,7 @@ d3.json("../../Resources/all_georgia.json").then(function(zipcodes){
     grocerylist.forEach(entry => {
         var row = tbody.append("tr");
         var listElement = row.append("td");
-        listElement.attr("class", "text-muted");
+        listElement.attr("class", "h6");
         listElement.style("font-size", "12x"); // change font-size to 24px 
         listElement.text(`${entry}`);
     });
@@ -75,7 +75,7 @@ d3.csv(incURL).then(function(income){
     var blayout = {
         xaxis: {title: "Income Levels"},
         yaxis: {title: "Number of Households"},
-        title: { text: "Household Income"},
+        automargin: true,
         autosize: true,
     };
 
@@ -110,7 +110,6 @@ d3.csv(educURL).then(function(education){
         }];
         
         var playout = {
-            title: { text: "Education Levels in the Area" },
             autosize: true,
             automargin: true,
             showlegend:false,
@@ -159,7 +158,6 @@ d3.csv(educURL).then(function(education){
             var blayout = {
                 xaxis: {title: "Income Levels"},
                 yaxis: {title: "Number of Households"},
-                title: { text: "Household Income"},
                 autosize: true,
             };
 
@@ -195,7 +193,6 @@ d3.csv(educURL).then(function(education){
                 }];
                 
                 var playout = {
-                    title: { text: "Education Levels in the Area" },
                     autosize: true,
                     automargin: true,
                     showlegend:false,
@@ -219,8 +216,8 @@ d3.csv(educURL).then(function(education){
             grocerylist.forEach(entry => {
                 var row = tbody.append("tr");
                 var listElement = row.append("td");
-                listElement.attr("class", "text-muted");
-                listElement.style("font-size", "12x"); // change font-size to 24px 
+                listElement.attr("class", "h6");
+                listElement.style("font-size", "12px"); 
                 listElement.text(`${entry}`);
             });
 
