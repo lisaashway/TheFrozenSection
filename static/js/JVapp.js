@@ -1,4 +1,4 @@
-var selectedZIP = "30318";
+var selectedZIP = "30002";
 console.log(selectedZIP);
 
 d3.json("../../Resources/all_georgia.json").then(function(zipcodes){
@@ -6,6 +6,7 @@ d3.json("../../Resources/all_georgia.json").then(function(zipcodes){
     var grocerylist = zipcodes[selectedZIP].groceryStores;
      //Creating Side Panel of Dempgraphic Info Body
     var selectDiv = d3.select("#grocerylist");
+    selectDiv.selectAll("table").remove();
     var table = selectDiv.append("table");
     var tbody = table.append("tbody");
 
@@ -16,7 +17,7 @@ d3.json("../../Resources/all_georgia.json").then(function(zipcodes){
         var listElement = row.append("td");
         listElement.attr("class", "text-muted");
         listElement.style("font-size", "12x"); // change font-size to 24px 
-        listElement.text(`${entry+}`);
+        listElement.text(`${entry}`);
     });
 });
 
