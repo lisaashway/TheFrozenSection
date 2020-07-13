@@ -7,8 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>The Frozen Section</title>
   <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
-  integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
   crossorigin=""/>
   <link rel="stylesheet" href="static/css/bootstrap.min.css">
   <link rel="stylesheet" href ="static/css/style.css">
@@ -29,7 +29,7 @@
         <div class = "card border-secondary mb-2">
           <div class = "card-header text-white bg-secondary text-center">Atlanta Map</div>
           <div class = "card-body">
-            <div id = "map"class="z-depth-1-half map-container-5" style="height: 300px"></div>
+            <div id = "map"class="z-depth-1-half map-container-5" style="height: 600px"></div>
           </div>
         </div>
       </div>
@@ -84,15 +84,14 @@
         </div>
       </div>
     </div>
- 
 
   <!-- Icons -->
   <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <link rel="stylesheet" href="static/css/leaflet.extra-markers.min.css">
 
   <!-- Leaflet JS-->
-  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
-  integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+  integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
   crossorigin=""></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -103,10 +102,17 @@
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="static/js/bubbles.js"></script>
   <script src="static/js/JVapp.js"></script>
+  <!-- MomentJS -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.1/moment.min.js"></script>
+  
+  <!-- d3 JavaScript -->
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+
+  <!-- Icon -->
+  <script src="static/js/leaflet.extra-markers.min.js"></script>
+
   <!-- Leaflet-Choropleth JavaScript -->
   <script type="text/javascript" src="static/js/choropleth.js"></script>
-
-  <script src="static/js/leaflet.extra-markers.min.js"></script>
 
   <!-- polyfill.io is library for using newer JavaScript features in older browers (such as Object.assign) -->
   <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
