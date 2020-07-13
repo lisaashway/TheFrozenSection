@@ -107,7 +107,7 @@ function getLatLon(jsonData, store, storeType) {
         icon: icons[storeType]
       });
         newMarker.addTo(layers[storeType]);
-        newMarker.bindPopup("<h4>"+jsonData[i].name+"<br>"+jsonData[i].formatted_address)
+        newMarker.bindPopup("<h6>"+jsonData[i].name+"<br>"+jsonData[i].formatted_address)
       }    
   }
 }
@@ -155,7 +155,7 @@ d3.json(geoData, function(data) {
     var labels = [];
 
     // Add min & max
-    var legendInfo = "<h1>% Residents with <br> H.S. Diploma or Lower</h1>" +
+    var legendInfo = "<h5><strong>% Residents with <br> H.S. Diploma or Lower</strong></h5>" +
       "<div class=\"labels\">" +
         "<div class=\"min\">" + limits[0].toPrecision(3) + "</div>" +
         "<div class=\"max\">" + limits[limits.length - 1] + "</div>" +
