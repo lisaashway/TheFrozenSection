@@ -42,11 +42,11 @@ var overlays = {
 L.control.layers(null, overlays).addTo(myMap);
 
 // Load in geojson data
-var geoData = "static/data/Education_by_District_2018.geojson";
-var publixLocation = "static/data/PublixLocations.json";
-var traderLocation = "static/data/TraderJoesLocations.json";
-var wholeFoodsLocation = "static/data/WholeFoodsLocations.json";
-var krogerLocation = "static/data/KrogerLocations.json";
+var geoData = "/static/data/Education_by_District_2018.geojson";
+var publixLocation = "/static/data/PublixLocations.json";
+var traderLocation = "/static/data/TraderJoesLocations.json";
+var wholeFoodsLocation = "/static/data/WholeFoodsLocations.json";
+var krogerLocation = "/static/data/KrogerLocations.json";
 
 
 var publix;
