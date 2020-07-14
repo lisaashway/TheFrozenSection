@@ -154,7 +154,7 @@ d3.csv(educURL).then(function(education){
 
         //incURL GET request
         //income function??
-        d3.csv(incURL).then(function(income){
+        d3.csv(incURL, function(income){
         
             //match incData[3] w/ slectedZIP and load that row's data?
             //var zips = income.features[0].properties.GEOID; 
@@ -206,7 +206,7 @@ d3.csv(educURL).then(function(education){
 
         //educURL GET request
         //education function??
-        d3.csv(educURL).then(function(education){
+        d3.csv(educURL, function(education){
         
 
             //match eduData w/ slectedZIP and load that row's data??
@@ -253,7 +253,7 @@ d3.csv(educURL).then(function(education){
                 Plotly.newPlot('pie', pdata, playout);
         });
 
-        d3.json("Resources/all_georgia.json").then(function(zipcodes){
+        d3.json("Resources/all_georgia.json", function(zipcodes){
             console.log(zipcodes[selectedZIP].groceryStores)
             var grocerylist = zipcodes[selectedZIP].groceryStores;
              //Creating Side Panel of Dempgraphic Info Body
