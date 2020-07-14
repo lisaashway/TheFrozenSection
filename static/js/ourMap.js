@@ -1,4 +1,3 @@
-API_KEY = "pk.eyJ1IjoiYXNocmMyMCIsImEiOiJja2J2Zm9tcWMwNWp3MndwYzFqem94czM0In0.kyKNT5nuxIcKuwKe_t_PVQ"
 
 // Adding tile layer
 var streetmap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
@@ -6,7 +5,7 @@ var streetmap = L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}
   tileSize: 512,
   maxZoom: 18,
   zoomOffset: -1,
-  id: "mapbox/outdoors-v11",
+  id: "mapbox/light-v10",
   accessToken: API_KEY
 });
 
@@ -71,7 +70,7 @@ var icons = {
   Traders: L.ExtraMarkers.icon({
     // icon: "ion-android-bicycle",
     iconColor: "white",
-    markerColor: "red",
+    markerColor: "yellow",
     shape: "star"
   }),
   WholeFoods: L.ExtraMarkers.icon({
@@ -83,7 +82,7 @@ var icons = {
   Kroger: L.ExtraMarkers.icon({
     // icon: "ion-minus-circled",
     iconColor: "white",
-    markerColor: "blue",
+    markerColor: "pink",
     shape: "square"
   })
 };
@@ -125,7 +124,7 @@ d3.json(geoData, function(data) {
     valueProperty: (feature) => feature.properties.pNoHS_e18+feature.properties.pSomeHS_e18+feature.properties.pHSGrad_e18,
 
     // Set color scale
-    scale: ["#ffffb2", "#b10026"],
+    scale: ["#bb8fce", "#1a5276"],
 
     // Number of breaks in step range
     steps: 10,
